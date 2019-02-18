@@ -1,1 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,600,700|Rubik:400,700|Montserrat');
 
+:root {
+    --lavender: #735D78;
+    --champagne: #F7D1CD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--lavender);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li a {
+    padding: 0 70px 0 70px;
+    text-decoration: none;
+    color: white;
+    font-family: "Kanit", Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+#navbar ul li a:hover {
+    color: var(--champagne);
+}
+
+main {
+    position: relative;
+    top: 50px;
+}
+
+#welcome-section {
+    height: 94.62vh;
+    background-color: var(--lavender);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#welcome-section h1,
+#welcome-section p {
+    margin: 0;
+    padding: 0;
+}
+
+#welcome-section h1 {
+    font-family: "Montserrat", Verdana, sans-serif;
+    letter-spacing: 10px;
+    margin-bottom: 3px;
+    font-size: 35px;
+    text-shadow: 0 0 5px white;
+}
+
+#welcome-section p {
+    font-family: "Rubik", Verdana, sans-serif;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+#projects {
+    margin-top: 80px;
+}
+
+#projects h3 {
+    text-align: center;
+    font-family: "Monteserrat", Verdana, sans-serif;
+    color: var(--lavender);
+    letter-spacing: 3px;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+.row-projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+
+.project {
+    width: 20rem;
+    height: 15rem;
+    border: 2px solid black;
+}
