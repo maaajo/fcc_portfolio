@@ -48,11 +48,11 @@ body {
 
 main {
     position: relative;
-    top: 50px;
+    top: 70px;
 }
 
 #welcome-section {
-    height: 94.62vh;
+    height: 95vh;
     background-color: var(--lavender);
     display: flex;
     flex-direction: column;
@@ -90,19 +90,176 @@ main {
     font-family: "Monteserrat", Verdana, sans-serif;
     color: var(--lavender);
     letter-spacing: 3px;
-    font-size: 20px;
+    font-size: 3vh;
     margin-bottom: 80px;
 }
 
-.row-projects {
+.grid-projects {
+    max-width: 100%;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 150px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
-.project {
+.project-tile {
+    flex-basis: auto;
     width: 20rem;
     height: 15rem;
-    border: 2px solid black;
+    background-color: #818AA3;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #93B7BE;
+    margin: 0 80px 40px 80px;
+}
+
+.project-tile a p {
+    text-align: center;
+    font-family: "Montserrat", Verdana, sans-serif;
+    color: var(--lavender);
+    font-size: 2.5vh;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.project-tile a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.project-tile:hover {
+    animation-name: make-bigger;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.project-tile:hover a p {
+    animation-name: rotate;
+    animation-duration: 0.5s;
+}
+
+.button-container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.show-btn {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    background-color: #B6A39E;
+    border-radius: 10px;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-size: 1rem;
+}
+
+.show-btn:hover {
+    animation: change-btn-bckg .5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    10% {
+        transform: rotate(calc(360deg * 0.1))
+    }
+    20% {
+        transform: rotate(calc(360deg * 0.2))
+    }
+    30% {
+        transform: rotate(calc(360deg * 0.3))
+    }
+    40% {
+        transform: rotate(calc(360deg * 0.4))
+    }
+    50% {
+        transform: rotate(calc(360deg * 0.5))
+    }
+    60% {
+        transform: rotate(calc(360deg * 0.6))
+    }
+    70% {
+        transform: rotate(calc(360deg * 0.7))
+    }
+    80% {
+        transform: rotate(calc(360deg * 0.8))
+    }
+    90% {
+        transform: rotate(calc(360deg * 0.9))
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes make-bigger {
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes change-btn-bckg {
+    100% {
+        background-color: rgb(74, 136, 74);
+    }
+}
+
+@media (max-width: 799px) {
+    #welcome-section h1 {
+        text-align: center;
+    }
+    #navbar {
+        justify-content: center;
+    }
+    #navbar ul li a {
+        padding: 0 25px 0 25px;
+        font-size: 3.5vh;
+    }
+}
+
+.contact-section {
+    background-color: var(--champagne);
+}
+
+.contact-header {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20rem;
+    flex-direction: column;
+}
+
+.contact-header h3 {
+    font-size: 3vh;
+}
+
+.contact-header p {
+    margin-top: -25px;
+    font-size: 1.5vh;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact {
+    margin: 0 50px 200px 50px;
+    border: 1px solid black;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
 }
