@@ -116,7 +116,7 @@ main {
     text-align: center;
     font-family: "Montserrat", Verdana, sans-serif;
     color: var(--lavender);
-    font-size: 2.5vh;
+    font-size: 23px;
     font-weight: 700;
     letter-spacing: 4px;
     color: white;
@@ -213,19 +213,6 @@ main {
     }
 }
 
-@media (max-width: 799px) {
-    #welcome-section h1 {
-        text-align: center;
-    }
-    #navbar {
-        justify-content: center;
-    }
-    #navbar ul li a {
-        padding: 0 25px 0 25px;
-        font-size: 3.5vh;
-    }
-}
-
 .contact-section {
     background-color: var(--champagne);
 }
@@ -241,12 +228,12 @@ main {
 }
 
 .contact-header h3 {
-    font-size: 3vh;
+    font-size: 30px;
 }
 
 .contact-header p {
     margin-top: -25px;
-    font-size: 1.5vh;
+    font-size: 15px;
     text-align: center;
 }
 
@@ -258,8 +245,86 @@ main {
 
 .contact {
     margin: 0 50px 200px 50px;
-    border: 1px solid black;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
+    background: #92B9BD;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact i {
+    font-size: 5vh;
+    color: #C5FFFD;
+}
+
+.contact-link {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.contact:hover {
+    animation: scale-up 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale-up {
+    100% {
+        transform: scale(1.1);
+        background: rgb(70, 97, 100);
+    }
+}
+
+.footer {
+    width: 100%;
+    background: rgb(70, 97, 100);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 799px) {
+    #welcome-section h1 {
+        text-align: center;
+    }
+    #navbar {
+        justify-content: center;
+    }
+    #navbar ul li a {
+        padding: 0 25px 0 25px;
+        font-size: 30px;
+    }
+    .contact {
+        margin: 0 25px 75px 25px;
+    }
+    .last-margin-contact {
+        margin-bottom: 150px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+    #navbar ul li a {
+        font-size: 20px;
+    }
+    .project-tile a p {
+        font-size: 18px;
+    }
 }
