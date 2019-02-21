@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,600,700|Rubik:400,700|Montserrat');
+
+:root {
+    --lavender: #735D78;
+    --champagne: #F7D1CD;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--lavender);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+#navbar ul li a {
+    padding: 0 70px 0 70px;
+    text-decoration: none;
+    color: white;
+    font-family: "Kanit", Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+#navbar ul li a:hover {
+    color: var(--champagne);
+}
+
+main {
+    position: relative;
+    top: 70px;
+}
+
+#welcome-section {
+    height: 100vh;
+    background-color: var(--lavender);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#welcome-section h1,
+#welcome-section p {
+    margin: 0;
+    padding: 0;
+}
+
+#welcome-section h1 {
+    font-family: "Montserrat", Verdana, sans-serif;
+    letter-spacing: 10px;
+    margin-bottom: 3px;
+    font-size: 35px;
+    text-shadow: 0 0 5px white;
+}
+
+#welcome-section p {
+    font-family: "Rubik", Verdana, sans-serif;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.projects-section {
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+#projects h3 {
+    text-align: center;
+    font-family: "Monteserrat", Verdana, sans-serif;
+    color: var(--lavender);
+    letter-spacing: 3px;
+    font-size: 3vh;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.grid-projects {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.project-tile {
+    flex-basis: auto;
+    width: 20rem;
+    height: 15rem;
+    background-color: #818AA3;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #93B7BE;
+    margin: 0 80px 40px 80px;
+}
+
+.project-tile a p {
+    text-align: center;
+    font-family: "Montserrat", Verdana, sans-serif;
+    color: var(--lavender);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: white;
+}
+
+.project-tile a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.project-tile:hover {
+    animation-name: make-bigger;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.button-container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.show-btn {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    background-color: #B6A39E;
+    border-radius: 10px;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-size: 1rem;
+}
+
+.show-btn:hover {
+    animation: change-btn-bckg .5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes make-bigger {
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes change-btn-bckg {
+    100% {
+        background-color: rgb(74, 136, 74);
+    }
+}
+
+.contact-section {
+    background-color: var(--champagne);
+}
+
+.contact-header {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20rem;
+    flex-direction: column;
+}
+
+.contact-header h3 {
+    font-size: 30px;
+}
+
+.contact-header p {
+    margin-top: -25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact {
+    margin: 0 50px 200px 50px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #92B9BD;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact i {
+    font-size: 5vh;
+    color: #C5FFFD;
+}
+
+.contact-link {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.contact:hover {
+    animation: scale-up 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale-up {
+    100% {
+        transform: scale(1.1);
+        background: rgb(70, 97, 100);
+    }
+}
+
+.footer {
+    width: 100%;
+    background: rgb(70, 97, 100);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: "Rubik", sans-serif;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 799px) {
+    #welcome-section h1 {
+        text-align: center;
+    }
+    #navbar {
+        justify-content: center;
+    }
+    #navbar ul li a {
+        padding: 0 25px 0 25px;
+        font-size: 30px;
+    }
+    .contact {
+        margin: 0 25px 75px 25px;
+    }
+    .last-margin-contact {
+        margin-bottom: 150px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+    #navbar ul li a {
+        font-size: 20px;
+    }
+    .project-tile a p {
+        font-size: 18px;
+    }
+}
+
+.anchor {
+    margin-top: -70px;
+    padding-top: 70px;
+}
+
+#welcome-section h1 {
+    transition: all 800ms linear;
+    transform: translate(1);
+    opacity: 1;
+}
